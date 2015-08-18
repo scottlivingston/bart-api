@@ -4,7 +4,7 @@ import akka.actor.ActorRef
 import akka.pattern.ask
 import akka.util.Timeout
 import io.livingston.bart.api.http.BaseRoute
-import io.livingston.bart.api.services.etd.{Etd, EtdService}
+import io.livingston.bart.api.services.etd.EtdService
 import spray.routing.Route
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -20,7 +20,7 @@ object ETDRoutes extends BaseRoute {
         etd ? EtdService.GetEtd()
       } {
         case Success(res) => res match {
-          case s: Etd => complete(s)
+          case EtdService.ReturnBartResult(_, s) => complete(s)
         }
         case Failure(ex) => {
           error("Shit broke")

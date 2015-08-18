@@ -30,7 +30,7 @@ class BartEtd extends Actor {
       response onComplete {
         case Success(r: HttpResponse) =>
           log.info("call worked")
-          sender() ! EtdService.ReturnBartResult(reflector, r)
+          reflector ! EtdService.ReturnBartResult(reflector, r)
         case Failure(_) =>
           log.info("call failed")
           sender() ! _
