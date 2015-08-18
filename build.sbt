@@ -10,6 +10,7 @@ libraryDependencies ++= Seq(
   "io.spray"          %% "spray-can"      % "1.3.3",
   "io.spray"          %% "spray-routing"  % "1.3.3",
   "io.spray"          %% "spray-json"     % "1.3.2",
+  "io.spray"          %% "spray-client"   % "1.3.3",
   "com.typesafe.akka" %% "akka-testkit"   % "2.3.9" % "test",
   "org.scalatest"     %% "scalatest"      % "2.2.4" % "test",
   "org.json4s"        %% "json4s-native"  % "3.2.11",
