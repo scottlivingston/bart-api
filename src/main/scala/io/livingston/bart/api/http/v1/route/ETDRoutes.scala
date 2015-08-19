@@ -20,7 +20,7 @@ object ETDRoutes extends BaseRoute {
         etd ? EtdService.GetEtd()
       } {
         case Success(res) => res match {
-          case EtdService.ReturnBartResult(_, s) => complete(s)
+          case EtdService.ReturnBartResult(s) => complete(s)
         }
         case Failure(ex) => {
           error("Shit broke")

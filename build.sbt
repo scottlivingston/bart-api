@@ -14,7 +14,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-testkit"   % "2.3.9" % "test",
   "org.scalatest"     %% "scalatest"      % "2.2.4" % "test",
   "org.json4s"        %% "json4s-native"  % "3.2.11",
-  "org.json4s"        %% "json4s-jackson" % "3.2.11"
+  "org.json4s"        %% "json4s-jackson" % "3.2.11",
+  "com.thoughtworks.xstream" % "xstream"  % "1.4.8"
 )
 
 
